@@ -74,7 +74,7 @@ def bulletboard():
         a=datetime.strptime(dateString, dateFormatter)
         #a=a+timedelta(days=1)
         if(datetime.now()>a):
-            sql_Delete_query = """DELETE FROM test WHERE ID= %s"""
+            sql_Delete_query = """DELETE FROM bulletboard WHERE ID= %s"""
             test=row[0]
             gcpsql.execute(sql_Delete_query, (test,))
             lssh1.commit()
